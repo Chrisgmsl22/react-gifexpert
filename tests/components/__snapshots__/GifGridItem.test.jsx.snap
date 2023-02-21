@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas dentro del componente de gifgriditem Debe de evaluar el snapshot  1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Spyro"
+      src="https://www.playstation.com/es-mx/games/spyro-reignited-trilogy/"
+    />
+    <p>
+      Spyro
+    </p>
+  </div>
+</div>
+`;

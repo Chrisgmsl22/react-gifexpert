@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 export const AddCategory = ({onNewValue}) => {
     //Cada componente puede tener su propio estado
@@ -19,7 +20,7 @@ export const AddCategory = ({onNewValue}) => {
         //VAlidador para no introducir espacios en blanco
         if (inputValue.trim().length <=1){return;}
 
-        //setCategories(categories => [inputValue, ...categories]);
+        
         //Solo mandamos a llamar a la función pasada desde el padre
         onNewValue(inputValue.trim()); //pasamos el valor limpio
         
@@ -28,7 +29,7 @@ export const AddCategory = ({onNewValue}) => {
     }
   return (
     
-        <form onSubmit={(event) => {onSubmit(event)}}>
+        <form onSubmit={(event) => {onSubmit(event)}} aria-label='form'>
             <input 
                 type="text"
                 placeholder='Buscar Gifs'
@@ -40,4 +41,9 @@ export const AddCategory = ({onNewValue}) => {
         
     
   );
+}
+
+
+AddCategory.propTypes = {
+    onNewValue: PropTypes.func.isRequired,
 }
